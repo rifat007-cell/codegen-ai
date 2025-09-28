@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS codegen(
+   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+   
+    user_id INTEGER NOT NULL REFERENCES users ON DELETE CASCADE,
+
+    language VARCHAR(250) NOT NULL,
+   
+   template VARCHAR(250) NOT NULL,
+
+   basepackage VARCHAR(250) NOT NULL,
+
+    workers INTEGER NOT NULL,
+
+
+   model VARCHAR(250) NOT NULL,
+
+
+   projectname VARCHAR(250) NOT NULL,
+
+   prompt TEXT NOT NULL
+
+
+)

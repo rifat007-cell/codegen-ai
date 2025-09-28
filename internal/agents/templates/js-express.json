@@ -1,0 +1,9 @@
+{
+  "name": "js-express-api",
+  "description": "Modern Node.js Express API (ESM) with structured routes, logging, centralized error handling, and environment-based configuration",
+  "language": "javascript",
+  "prompt": "Create a modern Node.js Express API using ESM with the following features:\n- Logging with morgan\n- Centralized error handling middleware\n- Environment-based configuration using dotenv\n- Structured routes and controllers\n- Modular project structure for scalability",
+  "files": {
+  }
+}
+

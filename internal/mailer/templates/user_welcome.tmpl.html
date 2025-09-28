@@ -1,0 +1,362 @@
+{{define "subject"}}Welcome to Maker - AI For Everyone{{end}}
+
+{{define "plainBody"}}
+Hi there,
+
+Welcome to Maker - AI For Everyone!
+
+We're thrilled to have you join our community of developers and AI enthusiasts. Your journey into AI-powered code
+generation starts here.
+
+Your User Details:
+- User ID: {{.ID}}
+- Email: {{.Email}}
+
+To get started, please activate your account by clicking the link below:
+http://localhost:3000/api/activate?token={{.activationToken}}
+
+What's Next?
+- Activate your account
+- Explore our AI code generation tools
+- Start building amazing projects with AI assistance
+
+If you have any questions, our support team is here to help.
+
+Best regards,
+The Maker Team
+AI For Everyone
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Welcome to Maker - AI For Everyone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Fira Code", "Courier New", monospace;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #eaeaea;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .email-header {
+            background: linear-gradient(135deg, #0d0d0d, #141414);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ffe7;
+            text-shadow: 0 0 10px rgba(0, 255, 231, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            color: #bbb;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+
+        .email-body {
+            padding: 2.5rem 2rem;
+            background: #111;
+        }
+
+        .welcome-message {
+            font-size: 1.1rem;
+            color: #eaeaea;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-text {
+            color: #00ffe7;
+            font-weight: bold;
+        }
+
+        .user-details {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .user-details h3 {
+            color: #00ffe7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .detail-label {
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        .detail-value {
+            color: #eaeaea;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 255, 231, 0.05);
+            border: 1px solid rgba(0, 255, 231, 0.2);
+            border-radius: 8px;
+        }
+
+        .cta-text {
+            color: #eaeaea;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .activate-btn {
+            display: inline-block;
+            background: #00ffe7;
+            color: #0a0a0a;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 231, 0.3);
+        }
+
+        .activate-btn:hover {
+            background: #00ccb5;
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 255, 231, 0.6);
+        }
+
+        .next-steps {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .next-steps h3 {
+            color: #00ffe7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem;
+            background: rgba(0, 255, 231, 0.05);
+            border-radius: 4px;
+        }
+
+        .step-number {
+            background: #00ffe7;
+            color: #0a0a0a;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            color: #eaeaea;
+            font-size: 0.9rem;
+        }
+
+        .email-footer {
+            background: #0d0d0d;
+            padding: 1.5rem 2rem;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-text {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-signature {
+            color: #00ffe7;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .support-link {
+            color: #00ffe7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .support-link:hover {
+            color: #00ccb5;
+            text-shadow: 0 0 5px rgba(0, 255, 231, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .email-container {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .email-header,
+            .email-body,
+            .email-footer {
+                padding: 1.5rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .user-details,
+            .next-steps,
+            .cta-section {
+                padding: 1rem;
+            }
+
+            .activate-btn {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="email-header">
+            <div class="logo">Maker</div>
+            <div class="tagline">AI For Everyone</div>
+        </div>
+
+        <!-- Body -->
+        <div class="email-body">
+            <div class="welcome-message">
+                <p>Hi there,</p>
+                <p>Welcome to <span class="highlight-text">Maker - AI For Everyone!</span></p>
+                <p>We're thrilled to have you join our community of developers and AI enthusiasts. Your journey into
+                    AI-powered code generation starts here.</p>
+            </div>
+
+            <!-- User Details Card -->
+            <div class="user-details">
+                <h3>Your Account Details</h3>
+                <div class="detail-item">
+                    <span class="detail-label">User ID:</span>
+                    <span class="detail-value">{{.ID}}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value">{{.Email}}</span>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-text">
+                    <strong>Ready to get started?</strong><br>
+                    Activate your account to unlock the full power of AI-driven development.
+                </div>
+                <a href="http://localhost:3000/api/activate?token={{.activationToken}}" class="activate-btn">
+                    Activate Your Account
+                </a>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <ul class="steps-list">
+                    <li class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Click the activation button above to verify your account</div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Explore our AI code generation tools and templates</div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Start building amazing projects with AI assistance</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="welcome-message">
+                <p>If you have any questions, our <a href="mailto:support@maker-ai.com" class="support-link">support
+                        team</a> is here to help.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="email-footer">
+            <div class="footer-text">Best regards,</div>
+            <div class="team-signature">The Maker Team</div>
+            <div class="footer-text">Building the future, one line of code at a time</div>
+        </div>
+    </div>
+</body>
+
+</html>
+{{end}}
