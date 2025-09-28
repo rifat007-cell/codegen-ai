@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useCart } from "./contexts";
+import { useCart } from "./Contexts";
 import { useNavigate, Link } from "@tanstack/react-router";
 
 const SignIn = () => {

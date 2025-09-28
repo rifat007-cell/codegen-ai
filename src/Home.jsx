@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router"
-import { useCart } from "./contexts";
+import { useCart } from "./Contexts"
 
 
 const Home = () => {

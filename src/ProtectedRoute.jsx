@@ -1,5 +1,5 @@
 import { Outlet, Navigate } from "@tanstack/react-router";
-import { useCart } from "./contexts";
+import { useCart } from "./Contexts";
 
 export default function ProtectedRoute() {
     const { user, isLoading } = useCart();

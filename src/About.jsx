@@ -1,4 +1,3 @@
-import { useCart } from "./Contexts";
 
 // About Component
 export default function About() {

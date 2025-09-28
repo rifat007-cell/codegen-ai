@@ -12,7 +12,7 @@ import About from "./About";
 import NotFoundRoute from "./NotFound";
 import User from "./User"
 import SignIn from "./SignIn";
-import { CartContext } from "./contexts";
+import { CartContext } from "./Contexts";
 import ProtectedRoute from "./ProtectedRoute";
 import ForgotPassword from "./ForgotPassword";
 import ResetPassword from "./ResetPassword";

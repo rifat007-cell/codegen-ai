@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { useCart } from "./contexts";
+import { useCart } from "./Contexts";
 
 export default function Layout() {
     const { user, isLoading, logoutUser } = useCart()
