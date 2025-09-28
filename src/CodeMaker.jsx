@@ -33,7 +33,7 @@ const AICodeGenerator = () => {
     const fetchUserHistory = async () => {
         try {
             setIsLoadingHistory(true);
-            const response = await fetch(`https://codegen-ai-2.onrender.com/api/history?user_id=${id}`);
+            const response = await fetch(`http://localhost:3000/api/history?user_id=${id}`);
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -181,7 +181,7 @@ const AICodeGenerator = () => {
         }
 
         // Connect to WebSocket
-        websocketRef.current = new WebSocket(`wss://codegen-ai-2.onrender.com/api/generate`);
+        websocketRef.current = new WebSocket(`ws://localhost:3000/api/generate`);
 
         websocketRef.current.onopen = () => {
             websocketRef.current.send(JSON.stringify({
