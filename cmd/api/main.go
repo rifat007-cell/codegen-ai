@@ -64,7 +64,7 @@ func main() {
 	flag.StringVar(&cfg.db.dsn, "db-url", os.Getenv("DB_URL"), "Database url")
 
 	flag.StringVar(&cfg.smtp.host, "smtp-host", os.Getenv("FROM_EMAIL_SMTP"), "SMTP host")
-	flag.IntVar(&cfg.smtp.port, "smtp-port", 25, "SMTP port")
+	flag.IntVar(&cfg.smtp.port, "smtp-port", 587, "SMTP port")
 	flag.StringVar(&cfg.smtp.username, "smtp-username", os.Getenv("FROM_EMAIL"), "SMTP username")
 	flag.StringVar(&cfg.smtp.password, "smtp-password", os.Getenv("FROM_EMAIL_PASSWORD"), "SMTP password")
 	flag.StringVar(&cfg.smtp.sender, "smtp-sender", os.Getenv("FROM_EMAIL"), "SMTP sender")
