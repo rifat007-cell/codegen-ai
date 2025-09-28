@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "vite build"
+    "build": "webpack --config webpack.config.js && cp src/Home.css dist/assets" 
   },
   "keywords": [],
   "author": "",
